@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db;
+    position: absolute;
+    animation: bounce 4s linear infinite, move 8s linear infinite, colorChange 2s linear infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, 100px);
+    }
+    50% {
+        transform: translate(200px, -50px);
+    }
+    75% {
+        transform: translate(-50px, 200px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        background-color: #102ac2;
+    }
+    50% {
+        background-color: #e74c3c;
+    }
+
+    30% {
+        background-color: #e73cc2;
+    }
+
+
+    20% {
+        background-color: #3ce7d9;
+    }
+
+    10% {
+        background-color: #3ce73c;
+    }
+
+}
+
+
+/* Estilos generales para todas las formas */
+.shape {
+    position: absolute;
+    animation: bounce 4s linear infinite, move 8s linear infinite, colorChange 2s linear infinite;
+}
+
+/* Círculo */
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db;
+    animation: bounce 4s linear infinite, move 8s linear infinite, colorChange 2s linear infinite;
+}
+
+/* Cuadrado */
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: #e74c3c;
+    animation: bounce 4s linear infinite, move 8s linear infinite, colorChange 2s linear infinite;
+}
+
+/* Línea */
+.line {
+    width: 50px;
+    height: 5px;
+    background-color: #27ae60;
+    transform-origin: left;
+    transform: rotate(45deg);
+    animation: bounce 4s linear infinite, move 8s linear infinite, colorChange 2.5s linear infinite;
+}
+
+/* Estrella */
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, 100px);
+    }
+    50% {
+        transform: translate(200px, -50px);
+    }
+    75% {
+        transform: translate(-50px, 200px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        background-color: #3498db;
+    }
+    50% {
+        background-color: #e74c3c;
+    }
+}

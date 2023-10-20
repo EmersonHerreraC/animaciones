@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Círculos Rebote</title>
+</head>
+
+<body>
+    <div class="container" id="circle-container">
+    </div>
+
+    </div>
+
+    <script>
+        const circleContainer = document.getElementById('circle-container');
+
+        for (let i = 0; i < 100; i++) {
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            const delay = Math.random() * 2;
+            circle.style.animationDelay = `${delay}s`;
+            const initialX = Math.random() * window.innerWidth;
+            const initialY = Math.random() * window.innerHeight;
+            circle.style.left = `${initialX}px`;
+            circle.style.top = `${initialY}px`;
+            circleContainer.appendChild(circle);
+        }
+
+
+
+        const shapeContainer = document.getElementById('circle-container');
+
+        function createShape(type) {
+            const shape = document.createElement('div');
+            shape.classList.add(type);
+            const delay = Math.random() * 4;
+            shape.style.animationDelay = `${delay}s`;
+            const initialX = Math.random() * window.innerWidth;
+            const initialY = Math.random() * window.innerHeight;
+            shape.style.left = `${initialX}px`;
+            shape.style.top = `${initialY}px`;
+            shapeContainer.appendChild(shape);
+        }
+
+        for (let i = 0; i < 20; i++) {
+            createShape('square');
+
+        }
+
+    </script>
+</body>
+
+</html>
